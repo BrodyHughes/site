@@ -1,2 +1,3 @@
-# site
-site
+# A practice project
+JS counter
+
