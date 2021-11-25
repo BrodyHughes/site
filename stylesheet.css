@@ -6,7 +6,7 @@ body {
   line-height: 1;
   font-family: sans-serif;
   text-align: center;
-  background: #000;
+  background: #fff;
   color: #fff;
 
 }
@@ -21,7 +21,7 @@ h1 {
   line-height: 1;
   text-align: center;
   font-family: sans-serif;
-  color: #fff;
+  color: #000;
 }
 
 h2 {
@@ -31,14 +31,9 @@ h2 {
   font-family: sans-serif;
   margin: 0 auto;
   margin: 10px;
-  color: #fff;
+  color: #000;
 
 
-}
-
-#js-counter {
-  border: 2px solid #000;
-  padding: 3px 5px;
 }
 
 p {
@@ -70,13 +65,13 @@ header h1 {
   max-width: 200px;
 }
 
-.button-wrap buton {
+.button-wrap .button {
   flex:1 0 50%;
   max-width: 100px;
   margin: 10px;
 }
 
-button {
+.button {
   font-size: 14px;
   padding: 10px 20px;
   background: #fff;
@@ -85,17 +80,4 @@ button {
   width: auto;
   border: none;
   margin:10px 0px;
-}
-
-#increment-btn {
-  background: green;
-}
-
-#unincrement-btn {
-  background: red;
-}
-
-#save-btn {
-  background: white;
-  color:black;
 }
