@@ -39,5 +39,4 @@ mobileMenuButton.addEventListener("click",function() {
     mainMenu.classList.add("main-menu-on")
   }
 })
-
 //yeah i should probably refactor some shit. dont @ me.
