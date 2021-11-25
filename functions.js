@@ -1,38 +1,43 @@
-
+//const variables. grabbing a bunch of shit from the dom via id
 const darkMode = document.getElementById("dark-mode")
 const darkState = document.getElementById("dark-state")
 const badState = document.getElementById("bad-state")
 const badMode = document.getElementById("bad-mode")
 const body = document.getElementById("body")
+const mobileMenuButton = document.getElementById("mobilemenu")
+const mainMenu = document.getElementById("mainmenu")
 
+//dark mode function
 darkMode.addEventListener("click", function() {
-
   if (body.classList.contains("dark-mode")){
       body.classList.remove("dark-mode")
-      darkState.textContent = "off"
   } else if (body.classList.contains("bad-contrast")){
       body.classList.remove("bad-contrast")
       body.classList.add("dark-mode")
-      badState.textContent = "off"
-      darkState.textContent = "on"
   } else {
     body.classList.add("dark-mode")
-    darkState.textContent = "on"
   }
 })
 
+//low contrast mode function
 badMode.addEventListener("click", function() {
-
   if (body.classList.contains("bad-contrast")){
     body.classList.remove("bad-contrast")
-    badState.textContent = "off"
 } else if (body.classList.contains("dark-mode")){
     body.classList.remove("dark-mode")
     body.classList.add("bad-contrast")
-    darkState.textContent = "off"
-    badState.textContent = "on"
 } else {
   body.classList.add("bad-contrast")
-  badState.textContent = "on"
 }
 })
+
+//show / hide menu on mobile
+mobileMenuButton.addEventListener("click",function() {
+  if (mainMenu.classList.contains("main-menu-on")) {
+    mainMenu.classList.remove("main-menu-on")
+  } else {
+    mainMenu.classList.add("main-menu-on")
+  }
+})
+
+//yeah i should probably refactor some shit. dont @ me.
