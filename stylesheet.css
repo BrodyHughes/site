@@ -1,9 +1,35 @@
 body {
-  width: 600px;
+  width: 100%;
   max-width: 80%;
   margin: 50px auto;
   font-size: 16px;
   line-height: 1;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+header .logo {
+  flex: 0 0;
+  text-decoration: none;
+  color: #000;
+}
+
+header .menu {
+  flex: 0 0 510px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+  padding: 0;
+  max-width: 100%;
 }
 
 body.dark-mode {
@@ -11,7 +37,9 @@ body.dark-mode {
 }
 
 
-.dark-mode h1, .dark-mode h2, .dark-mode p, .dark-mode a, .dark-mode #dark-state, .dark-mode #bad-state, .dark-mode li::marker{
+.dark-mode h1, .dark-mode h2, .dark-mode p, 
+.dark-mode a, .dark-mode #dark-state, 
+.dark-mode #bad-state, .dark-mode li::marker{
   color:#fff;
 }
 
@@ -19,7 +47,10 @@ body.bad-contrast {
   background:rgb(0, 255, 34);
 }
 
-.bad-contrast h1, .bad-contrast h2, .bad-contrast p, .bad-contrast a, .bad-contrast #dark-state, .bad-contrast #bad-state, .bad-contrast li::marker{
+.bad-contrast h1, .bad-contrast h2, 
+.bad-contrast p, .bad-contrast a, 
+.bad-contrast #dark-state, .bad-contrast #bad-state, 
+.bad-contrast li::marker{
   color:rgb(187, 255, 0);
 }
 
@@ -30,6 +61,15 @@ body .calc-wrap {
 h1 {
   font-size: 30px;
   line-height: 1;
+}
+
+.menu li {
+ list-style-type: none;
+}
+
+.menu li a {
+  padding: 5px 15px;
+  text-decoration: none;
 }
 
 li {
@@ -52,16 +92,17 @@ a, button{
   pointer-events: all;
 }
 
-header, .content {
+.content {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-flow: column wrap;
   width: 100%;
   margin: 0 auto;
+  max-width: 100%;
 }
 
-.button-wrap {
+.content-wrap {
   margin:5px 0;
   width: 100%;
   display: flex;
@@ -71,7 +112,22 @@ header, .content {
   pointer-events: none;
 }
 
-.button-wrap .button {
+.portfolio-wrap {
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  max-width: 100%;
+}
+
+.portfolio-item {
+  flex: 1 0 500px;
+  max-width: 100%;
+  width: 300px;
+  padding: 20px;
+  object-fit: contain;
+}
+
+.content-wrap .button {
   flex:1 0 50%;
   max-width: 100px;
 }
