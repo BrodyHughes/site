@@ -1,3 +1,9 @@
+/*****************/
+/*****************/
+/**basic styling**/
+/*****************/
+/*****************/
+
 body {
   width: 100%;
   max-width: 80%;
@@ -5,93 +11,29 @@ body {
   font-size: 16px;
   line-height: 1;
 }
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-flow: row wrap;
-  width: 100%;
-  margin-bottom: 50px;
-}
-
-header .logo {
-  flex: 0 0;
-  text-decoration: none;
-  color: #000;
-}
-
-header .menu {
-  flex: 0 0 510px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row wrap;
-  width: 100%;
-  padding: 0;
-  max-width: 100%;
-}
-
-body.dark-mode {
-  background:rgb(30, 30, 31);
-}
-
-
-.dark-mode h1, .dark-mode h2, .dark-mode p, 
-.dark-mode a, .dark-mode #dark-state, 
-.dark-mode #bad-state, .dark-mode li::marker{
-  color:#fff;
-}
-
-body.bad-contrast {
-  background:rgb(0, 255, 34);
-}
-
-.bad-contrast h1, .bad-contrast h2, 
-.bad-contrast p, .bad-contrast a, 
-.bad-contrast #dark-state, .bad-contrast #bad-state, 
-.bad-contrast li::marker{
-  color:rgb(187, 255, 0);
-}
-
-body .calc-wrap {
-  padding-bottom: 50px;
-}
-
 h1 {
   font-size: 30px;
   line-height: 1;
 }
-
-.menu li {
- list-style-type: none;
-}
-
-.menu li a {
-  padding: 5px 15px;
-  text-decoration: none;
-}
-
 li {
   line-height: 1.2;
 }
-
 h2 {
   font-size: 25px;
   line-height: 1;
   margin: 0;
 }
-
 p {
   font-size: 16px;
   width:100%;
   margin-bottom: 10px;
 }
-
 a, button{
   pointer-events: all;
 }
-
+a:hover {
+  cursor: pointer;
+}
 .content {
   display: flex;
   align-items: flex-start;
@@ -101,7 +43,6 @@ a, button{
   margin: 0 auto;
   max-width: 100%;
 }
-
 .content-wrap {
   margin:5px 0;
   width: 100%;
@@ -111,6 +52,94 @@ a, button{
   flex-flow: row wrap;
   pointer-events: none;
 }
+
+footer {
+  padding-top: 50px;
+}
+
+/******************/
+/******************/
+/**header styling**/
+/******************/
+/******************/
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-bottom: 50px;
+}
+header .logo {
+  flex: 0 0;
+  text-decoration: none;
+  color: #000;
+}
+
+/****************/
+/****************/
+/**menu styling**/
+/****************/
+/****************/
+
+.mobile-menu {
+  display: none;
+}
+#mainmenu {
+  flex: 0 0 510px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+  padding: 0;
+  max-width: 100%;
+}
+.main-menu-on {
+  display: flex !important;
+}
+.menu li {
+  list-style-type: none;
+ }
+.menu li a {
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+/************************************/
+/************************************/
+/**dark / low contrast mode styling**/
+/************************************/
+/************************************/
+
+body.dark-mode {
+  background:rgb(30, 30, 31);
+}
+.dark-mode h1, .dark-mode h2, .dark-mode p, 
+.dark-mode a, .dark-mode #dark-state, 
+.dark-mode #bad-state, .dark-mode li::marker{
+  color:#fff;
+}
+body.bad-contrast {
+  background:rgb(0, 255, 34);
+}
+.bad-contrast h1, .bad-contrast h2, 
+.bad-contrast p, .bad-contrast a, 
+.bad-contrast #dark-state, .bad-contrast #bad-state, 
+.bad-contrast li::marker{
+  color:rgb(187, 255, 0);
+}
+#dark-state, #bad-state {
+  display: block;
+  margin:0 5px;
+}
+
+/*********************/
+/*********************/
+/**portfolio styling**/
+/*********************/
+/*********************/
 
 .portfolio-wrap {
   align-items: center;
@@ -132,17 +161,13 @@ a, button{
   max-width: 100px;
 }
 
-#dark-state, #bad-state {
-  display: block;
-  margin:0 5px;
-}
+/**************************/
+/**************************/
+/**single media query lol**/
+/**************************/
+/**************************/
 
-a:hover {
-  cursor: pointer;
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
     h1 {
       font-size:40px;
     }
@@ -152,16 +177,25 @@ a:hover {
 
     #dark-state, #bad-state, p, li, button {
     font-size:20px;
-    /* line-height: 1.2; */
+  }
+
+  .mobile-menu {
+    display: block;
+    width: 100%;
+    font-size: 30px;
+  }
+
+  #mainmenu {
+    display: none;
+  }
+
+  .menu li a {
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+  }
+
+  .menu li {
+    width:100%;
   }
 }
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
