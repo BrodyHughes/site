@@ -47,14 +47,12 @@ header, .content {
 .button-wrap .button {
   flex:1 0 50%;
   max-width: 100px;
-  margin: 10px;
+  margin: 10px auto;
 }
 
 .button {
   border: 2px solid;
   padding: 10px 20px;
   color:#000;
-  margin: 0 auto;
   width: auto;
-  margin:10px 0px;
 }
