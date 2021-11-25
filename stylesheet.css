@@ -1,8 +1,26 @@
 body {
-  max-width: 600px;
-  margin: 0 auto;
+  width: 600px;
+  max-width: 80%;
+  margin: 50px auto;
   font-size: 16px;
   line-height: 1;
+}
+
+body.dark-mode {
+  background:rgb(30, 30, 31);
+}
+
+
+.dark-mode h1, .dark-mode h2, .dark-mode p, .dark-mode a, .dark-mode #dark-state, .dark-mode #bad-state, .dark-mode li::marker{
+  color:#fff;
+}
+
+body.bad-contrast {
+  background:rgb(0, 255, 34);
+}
+
+.bad-contrast h1, .bad-contrast h2, .bad-contrast p, .bad-contrast a, .bad-contrast #dark-state, .bad-contrast #bad-state, .bad-contrast li::marker{
+  color:rgb(187, 255, 0);
 }
 
 body .calc-wrap {
@@ -12,6 +30,10 @@ body .calc-wrap {
 h1 {
   font-size: 30px;
   line-height: 1;
+}
+
+li {
+  line-height: 1.2;
 }
 
 h2 {
@@ -26,6 +48,10 @@ p {
   margin-bottom: 10px;
 }
 
+a, button{
+  pointer-events: all;
+}
+
 header, .content {
   display: flex;
   align-items: flex-start;
@@ -36,23 +62,50 @@ header, .content {
 }
 
 .button-wrap {
+  margin:5px 0;
   width: 100%;
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-flow: row wrap;
+  pointer-events: none;
 }
 
 .button-wrap .button {
   flex:1 0 50%;
   max-width: 100px;
-  margin: 10px 0;
-  text-align: center;
 }
 
-.button {
-  border: 2px solid;
-  padding: 10px 20px;
-  color:#000;
-  width: auto;
+#dark-state, #bad-state {
+  display: block;
+  margin:0 5px;
 }
+
+a:hover {
+  cursor: pointer;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    h1 {
+      font-size:40px;
+    }
+    h2 {
+      font-size:30px;
+    }
+
+    #dark-state, #bad-state, p, li, button {
+    font-size:20px;
+    /* line-height: 1.2; */
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
