@@ -47,6 +47,7 @@ p {
   width: 100%;
   margin-bottom: 5px;
   text-align: center;
+  line-height: 1.2;
   color: #fff;
 }
 
@@ -110,7 +111,7 @@ header {
   justify-content: space-between;
   flex-flow: row wrap;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 header .logo {
