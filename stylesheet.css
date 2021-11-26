@@ -10,41 +10,82 @@ body {
   margin: 50px auto;
   font-size: 16px;
   line-height: 1;
+  font-family: 'PT Serif', serif;
+  background: rgb(27, 27, 29);
+  color: #fff;
 }
-h1 {
-  font-size: 30px;
+
+h1,
+a.logo {
+  font-size: 40px;
   line-height: 1;
+  font-weight: 700;
+  background: -webkit-linear-gradient(0deg, #fc466b, #3f5efb);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: GradientAnimation 10s ease infinite;
+  -moz-animation: GradientAnimation 10s ease infinite;
+  -o-animation: GradientAnimation 10s ease infinite;
+  animation: GradientAnimation 10s ease infinite;
 }
+
 li {
   line-height: 1.2;
 }
+
 h2 {
-  font-size: 25px;
+  font-size: 40px;
   line-height: 1;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
+
 p {
   font-size: 16px;
-  width:100%;
-  margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #fff;
 }
-a, button{
+
+a,
+button {
   pointer-events: all;
+  color: #fa466c;
+  text-decoration: none;
 }
+
+button,
+.button {
+  background: -webkit-linear-gradient(0deg, #fc466b, #3f5efb);
+  background-size: 300% 300%;
+  -webkit-animation: GradientAnimation 10s ease infinite;
+  -moz-animation: GradientAnimation 10s ease infinite;
+  -o-animation: GradientAnimation 10s ease infinite;
+  animation: GradientAnimation 10s ease infinite;
+  border: none;
+  color: #fff;
+  padding: 6px 16px;
+}
+
 a:hover {
   cursor: pointer;
 }
+
 .content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-flow: column wrap;
   width: 100%;
   margin: 0 auto;
   max-width: 100%;
 }
+
 .content-wrap {
-  margin:5px 0;
+  margin: 5px 0;
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -71,10 +112,11 @@ header {
   width: 100%;
   margin-bottom: 50px;
 }
+
 header .logo {
   flex: 0 0;
   text-decoration: none;
-  color: #000;
+  /* color: #000; */
 }
 
 /****************/
@@ -85,9 +127,17 @@ header .logo {
 
 .mobile-menu {
   display: none;
+  z-index: 9999;
+  border: none;
+  background: url('menu.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 0;
 }
+
 #mainmenu {
-  flex: 0 0 510px;
+  flex: 0 0 575px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,15 +146,20 @@ header .logo {
   padding: 0;
   max-width: 100%;
 }
+
 .main-menu-on {
   display: flex !important;
 }
+
 .menu li {
   list-style-type: none;
- }
+}
+
 .menu li a {
   padding: 5px 15px;
   text-decoration: none;
+  color: #fff;
+  font-size: 17px;
 }
 
 /************************************/
@@ -114,25 +169,60 @@ header .logo {
 /************************************/
 
 body.dark-mode {
-  background:rgb(30, 30, 31);
+  background: rgb(255, 255, 255);
 }
-.dark-mode h1, .dark-mode h2, .dark-mode p, 
-.dark-mode a, .dark-mode #dark-state, 
-.dark-mode #bad-state, .dark-mode li::marker{
-  color:#fff;
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode p,
+.dark-mode a,
+.dark-mode #dark-state,
+.dark-mode #bad-state,
+.dark-mode li::marker {
+  color: rgb(0, 0, 0) !important;
 }
+
+.dark-mode .mobile-menu {
+  filter: invert(0);
+}
+
 body.bad-contrast {
-  background:rgb(0, 255, 34);
+  background: rgb(0, 255, 34);
 }
-.bad-contrast h1, .bad-contrast h2, 
-.bad-contrast p, .bad-contrast a, 
-.bad-contrast #dark-state, .bad-contrast #bad-state, 
-.bad-contrast li::marker{
-  color:rgb(187, 255, 0);
+
+.bad-contrast h1,
+.bad-contrast h2,
+.bad-contrast p,
+.bad-contrast a,
+.bad-contrast #dark-state,
+.bad-contrast #bad-state,
+.bad-contrast li::marker {
+  color: rgb(187, 255, 0);
 }
-#dark-state, #bad-state {
+
+.bad-contrast button,
+.bad-contrast .button,
+.bad-contrast a.logo {
+  background: -webkit-linear-gradient(0deg, rgb(187, 255, 0), rgb(0, 255, 21));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: GradientAnimation 10s ease infinite;
+  -moz-animation: GradientAnimation 10s ease infinite;
+  -o-animation: GradientAnimation 10s ease infinite;
+  animation: GradientAnimation 10s ease infinite;
+}
+
+.bad-contrast .mobile-menu {
+  background:transparent;
+}
+
+#dark-state,
+#bad-state {
   display: block;
-  margin:0 5px;
+  margin: 0 5px;
 }
 
 /*********************/
@@ -157,8 +247,71 @@ body.bad-contrast {
 }
 
 .content-wrap .button {
-  flex:1 0 50%;
+  flex: 1 0 50%;
   max-width: 100px;
+}
+
+
+/*************/
+/*************/
+/**keyframes**/
+/*************/
+/*************/
+
+@-webkit-keyframes GradientAnimation {
+  0% {
+    background-position: 0% 51%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 51%;
+  }
+}
+
+@-moz-keyframes GradientAnimation {
+  0% {
+    background-position: 0% 51%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 51%;
+  }
+}
+
+@-o-keyframes GradientAnimation {
+  0% {
+    background-position: 0% 51%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 51%;
+  }
+}
+
+@keyframes GradientAnimation {
+  0% {
+    background-position: 0% 51%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 51%;
+  }
 }
 
 /**************************/
@@ -168,21 +321,40 @@ body.bad-contrast {
 /**************************/
 
 @media only screen and (max-width: 900px) {
-    h1 {
-      font-size:40px;
-    }
-    h2 {
-      font-size:30px;
-    }
+  h1 {
+    font-size: 60px;
+    text-align: center;
+  }
 
-    #dark-state, #bad-state, p, li, button {
-    font-size:20px;
+  header .logo {
+    text-align: center;
+    font-size: 65px;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  #dark-state,
+  #bad-state,
+  p,
+  li,
+  button {
+    font-size: 20px;
   }
 
   .mobile-menu {
     display: block;
     width: 100%;
-    font-size: 30px;
+    font-size: 0;
+    height: 30px;
+    margin-top: 40px;
+    animation: none;
+    filter: invert(1);
   }
 
   #mainmenu {
@@ -193,9 +365,10 @@ body.bad-contrast {
     padding: 10px 0;
     display: block;
     width: 100%;
+    text-align: center;
   }
 
   .menu li {
-    width:100%;
+    width: 100%;
   }
 }
