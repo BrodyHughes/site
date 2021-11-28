@@ -11,8 +11,8 @@ body {
   font-size: 16px;
   line-height: 1;
   font-family: 'Inconsolata', monospace;
-  background: rgb(27, 27, 29);
-  color: #fff;
+  background: #e7e5de;
+  color: #111112;
   font-weight: 100;
 }
 
@@ -21,16 +21,16 @@ a.logo {
   font-size: 40px;
   line-height: 1;
   font-weight: 700;
-  background: -webkit-linear-gradient(0deg, #fc466b, #3f5efb);
+  background: -webkit-linear-gradient(0deg, #f42e1f, #2f256b);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: GradientAnimation 10s ease infinite;
-  -moz-animation: GradientAnimation 10s ease infinite;
-  -o-animation: GradientAnimation 10s ease infinite;
-  animation: GradientAnimation 10s ease infinite;
+  -webkit-animation: GradientAnimation 7s ease infinite;
+  -moz-animation: GradientAnimation 7s ease infinite;
+  -o-animation: GradientAnimation 7s ease infinite;
+  animation: GradientAnimation 7s ease infinite;
 }
 
 li {
@@ -42,6 +42,8 @@ h2 {
   line-height: 1;
   margin: 0 0 10px 0;
   text-align: center;
+  font-weight: 200;
+  letter-spacing: 0;
 }
 
 p {
@@ -50,28 +52,28 @@ p {
   margin-bottom: 5px;
   text-align: center;
   line-height: 1.2;
-  color: #fff;
+  color: #111112;
 }
 
 a,
 button {
   pointer-events: all;
-  color: #fa466c;
+  color: #f42e1f;
   text-decoration: none;
 }
 
 button,
 .button {
-  background: -webkit-linear-gradient(0deg, #fc466b, #3f5efb);
-  background-size: 300% 300%;
-  -webkit-animation: GradientAnimation 10s ease infinite;
-  -moz-animation: GradientAnimation 10s ease infinite;
-  -o-animation: GradientAnimation 10s ease infinite;
-  animation: GradientAnimation 10s ease infinite;
-  border: none;
-  color: #fff;
-  padding: 6px 16px;
-  font-family: 'Inconsolata', monospace;
+ background: -webkit-linear-gradient(0deg, #f42e1f, #2f256b);
+ background-size: 300% 300%;
+ -webkit-animation: GradientAnimation 7s ease infinite;
+ -moz-animation: GradientAnimation 7s ease infinite;
+ -o-animation: GradientAnimation 7s ease infinite;
+ animation: GradientAnimation 7s ease infinite;
+ border: none;
+ color: #fff;
+ padding: 6px 16px;
+ font-family: 'Inconsolata', monospace;
 }
 
 a:hover {
@@ -86,7 +88,7 @@ a:hover {
   width: 1024px;
   margin: 0 auto;
   max-width: 100%;
-  padding: 100px 5%;
+  padding: 120px 5%;
 }
 
 footer .content-wrap {
@@ -133,7 +135,7 @@ header {
   justify-content: space-between;
   flex-flow: row wrap;
   width: 1024px;
-  margin: 0 auto 20px;
+  margin: 0 auto 0px;
   max-width: 100%;
 }
 
@@ -141,7 +143,8 @@ header .logo {
   flex: 0 0;
   text-decoration: none;
   /* color: #000; */
-  font-weight: 800;
+  font-weight: 500;
+  /* letter-spacing: -1.5px; */
 }
 
 /****************/
@@ -172,6 +175,7 @@ header .logo {
   width: 30px;
   position: relative;
   display: block;
+  filter: invert(0.9);
 }
 
 #twitter {
@@ -183,7 +187,7 @@ header .logo {
 }
 
 #fnd {
-  background: url('FND.png');
+  background: url('fnd.png');
   width: 70px;
 }
 
@@ -218,7 +222,7 @@ header .logo {
 .menu li a {
   padding: 5px 15px;
   text-decoration: none;
-  color: #fff;
+  color: #111112;
   font-size: 20px;
 }
 
@@ -229,54 +233,21 @@ header .logo {
 /************************************/
 
 body.dark-mode {
-  background: rgb(255, 255, 255);
+  background: #111112;
 }
 
 .dark-mode h1,
 .dark-mode h2,
 .dark-mode p,
-.dark-mode a,
+.dark-mode header li a,
 .dark-mode #dark-state,
 .dark-mode #bad-state,
 .dark-mode li::marker {
-  color: rgb(0, 0, 0) !important;
+  color: #fff !important;
 }
 
 .dark-mode .mobile-menu {
-  filter: invert(0);
-}
-
-body.bad-contrast {
-  background: rgb(0, 255, 34);
-}
-
-.bad-contrast h1,
-.bad-contrast h2,
-.bad-contrast p,
-.bad-contrast a,
-.bad-contrast #dark-state,
-.bad-contrast #bad-state,
-.bad-contrast li::marker {
-  color: rgb(187, 255, 0);
-}
-
-.bad-contrast button,
-.bad-contrast .button,
-.bad-contrast a.logo {
-  background: -webkit-linear-gradient(0deg, rgb(187, 255, 0), rgb(0, 255, 21));
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: GradientAnimation 10s ease infinite;
-  -moz-animation: GradientAnimation 10s ease infinite;
-  -o-animation: GradientAnimation 10s ease infinite;
-  animation: GradientAnimation 10s ease infinite;
-}
-
-.bad-contrast .mobile-menu {
-  background:transparent;
+  filter: invert(1);
 }
 
 .dark-mode footer ul {
@@ -284,7 +255,7 @@ body.bad-contrast {
 }
 
 .dark-mode .menu {
-  color:#000;
+  color:#fff;
 }
 
 #dark-state,
@@ -414,7 +385,7 @@ body.bad-contrast {
   }
 
   .body-content {
-    padding:30px 2% 60px;
+    padding: 50px 2% 60px;
   }
 
   #dark-state,
@@ -440,7 +411,7 @@ body.bad-contrast {
     height: 30px;
     margin-top: 40px;
     animation: none;
-    filter: invert(1);
+    filter: invert(0.1);
   }
 
   #mainmenu {

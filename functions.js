@@ -29,18 +29,6 @@ darkMode.addEventListener("click", function() {
   }
 })
 
-//low contrast mode function
-badMode.addEventListener("click", function() {
-  if (body.classList.contains("bad-contrast")) {
-    body.classList.remove("bad-contrast")
-  } else if (body.classList.contains("dark-mode")) {
-    body.classList.remove("dark-mode")
-    body.classList.add("bad-contrast")
-  } else {
-    body.classList.add("bad-contrast")
-  }
-})
-
 // mobile menu + jquery smooth scroll
 mobileMenuButton.addEventListener("click", function() {
   if (mainMenu.style.display !== "flex") {
