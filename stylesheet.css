@@ -21,16 +21,16 @@ a.logo {
   font-size: 40px;
   line-height: 1;
   font-weight: 700;
-  background: -webkit-linear-gradient(0deg, #f42e1f, #2f256b);
-  background-size: 300% 300%;
+  background: -webkit-linear-gradient(0deg, #f42e1f, #2f256b, #f42e1f);
+  background-size: 500% 500%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: GradientAnimation 7s ease infinite;
-  -moz-animation: GradientAnimation 7s ease infinite;
-  -o-animation: GradientAnimation 7s ease infinite;
-  animation: GradientAnimation 7s ease infinite;
+  -webkit-animation: GradientAnimation 12s ease infinite;
+  -moz-animation: GradientAnimation 12s ease infinite;
+  -o-animation: GradientAnimation 12s ease infinite;
+  animation: GradientAnimation 12s ease infinite;
 }
 
 li {
@@ -64,12 +64,12 @@ button {
 
 button,
 .button {
- background: -webkit-linear-gradient(0deg, #f42e1f, #2f256b);
- background-size: 300% 300%;
- -webkit-animation: GradientAnimation 7s ease infinite;
- -moz-animation: GradientAnimation 7s ease infinite;
- -o-animation: GradientAnimation 7s ease infinite;
- animation: GradientAnimation 7s ease infinite;
+ background: -webkit-linear-gradient(0deg, #f42e1f 0%, #2f256b 30%, #2f256b 70%, #f42e1f);
+ background-size: 500% 500%;
+ -webkit-animation: GradientAnimation 12s ease infinite;
+ -moz-animation: GradientAnimation 12s ease infinite;
+ -o-animation: GradientAnimation 12s ease infinite;
+ animation: GradientAnimation 12s ease infinite;
  border: none;
  color: #fff;
  padding: 6px 16px;
@@ -101,7 +101,7 @@ footer ul {display: flex;align-items: center;justify-content: center;flex-flow: 
 
 footer li {
   list-style-type: none;
-  padding: 5px 10px;
+  padding: 4px 5px;
 }
 
 .content-wrap {
@@ -171,7 +171,7 @@ header .logo {
   background-position: center !important;
   background-repeat: no-repeat !important;
   font-size: 0;
-  height: 30px;
+  height: 25px;
   width: 30px;
   position: relative;
   display: block;
@@ -188,12 +188,12 @@ header .logo {
 
 #fnd {
   background: url('FND.png');
-  width: 70px;
+  width: 60px;
 }
 
 #gallery {
   background: url('oncyber.png');
-  width: 45px;
+  width: 35px;
 }
 
 #vault {
