@@ -7,8 +7,6 @@ document.getElementsByTagName('head')[0].appendChild(script);
 //const variables. grabbing a bunch of shit from the dom via id
 const darkMode = document.getElementById("dark-mode")
 const darkState = document.getElementById("dark-state")
-const badState = document.getElementById("bad-state")
-const badMode = document.getElementById("bad-mode")
 const body = document.getElementById("body")
 const mobileMenuButton = document.getElementById("mobilemenu")
 const mainMenu = document.getElementById("mainmenu")
@@ -21,22 +19,21 @@ const bodyContent = document.getElementById("body-content")
 darkMode.addEventListener("click", function() {
   if (body.classList.contains("dark-mode")) {
     body.classList.remove("dark-mode")
-  } else if (body.classList.contains("bad-contrast")) {
-    body.classList.remove("bad-contrast")
-    body.classList.add("dark-mode")
+    darkMode.innerHTML = "dark mode"
   } else {
     body.classList.add("dark-mode")
+    darkMode.innerHTML = "light mode"
   }
 })
 
 // mobile menu + jquery smooth scroll
 mobileMenuButton.addEventListener("click", function() {
   if (mainMenu.style.display !== "flex") {
-    $(mainMenu).slideToggle(400)
+    $(mainMenu).slideToggle(500)
     mainMenu.style.display = "flex";
   } else {
-    $(mainMenu).slideUp(400)
     mainMenu.style.display = "none";
+    $(mainMenu).slideUp(500)
   }
 });
 
