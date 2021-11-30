@@ -14,6 +14,11 @@ body {
   background: #e7e5de;
   color: #111112;
   font-weight: 100;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 h1,
@@ -44,6 +49,11 @@ h2 {
   text-align: center;
   font-weight: 200;
   letter-spacing: 0;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 p {
@@ -53,6 +63,11 @@ p {
   text-align: center;
   line-height: 1.2;
   color: #111112;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 a,
@@ -60,6 +75,11 @@ button {
   pointer-events: all;
   color: #f42e1f;
   text-decoration: none;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 button,
@@ -176,6 +196,11 @@ header .logo {
   position: relative;
   display: block;
   filter: invert(0.9);
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 #twitter {
@@ -209,6 +234,11 @@ header .logo {
   width: 100%;
   padding: 0;
   max-width: 100%;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 .main-menu-on {
