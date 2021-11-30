@@ -29,7 +29,6 @@ darkMode.addEventListener("click", function() {
 // mobile menu + jquery smooth scroll
 mobileMenuButton.addEventListener("click", function() {
   if (mainMenu.style.display !== "flex") {
-    $(mainMenu).slideDown(500)
     mainMenu.style.display = "flex";
   } else {
     mainMenu.style.display = "none";
