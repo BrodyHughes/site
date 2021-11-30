@@ -32,7 +32,6 @@ mobileMenuButton.addEventListener("click", function() {
     $(mainMenu).slideDown(500)
     mainMenu.style.display = "flex";
   } else {
-    $(mainMenu).slideUp(500)
     mainMenu.style.display = "none";
   }
 });
