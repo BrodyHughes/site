@@ -29,11 +29,11 @@ darkMode.addEventListener("click", function() {
 // mobile menu + jquery smooth scroll
 mobileMenuButton.addEventListener("click", function() {
   if (mainMenu.style.display !== "flex") {
-    $(mainMenu).slideToggle(500)
+    $(mainMenu).slideDown(500)
     mainMenu.style.display = "flex";
   } else {
-    mainMenu.style.display = "none";
     $(mainMenu).slideUp(500)
+    mainMenu.style.display = "none";
   }
 });
 
