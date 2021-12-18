@@ -1,8 +1,8 @@
-//jQuery???
-const script = document.createElement('script');
-script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
-script.type = 'text/javascript';
-document.getElementsByTagName('head')[0].appendChild(script);
+// jQuery???
+// const script = document.createElement('script');
+// script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+// script.type = 'text/javascript';
+// document.getElementsByTagName('head')[0].appendChild(script);
 
 //const variables. grabbing a bunch of shit from the dom via id
 const darkMode = document.getElementById("dark-mode")
