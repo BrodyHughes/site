@@ -1,3 +1,3 @@
 # A practice project
-JS counter
+my personal site
 
